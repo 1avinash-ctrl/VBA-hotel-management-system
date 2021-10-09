@@ -1,0 +1,21 @@
+Option Explicit
+
+Sub updateroom()
+Sheets("Hotel").Activate
+    Dim roomid As Range
+    ' this will find the cell in the udpate rooms coulmn
+    Set roomid = Range("X25:AE44").Find(what:=Range("Z20:AA20").Value, LookIn:=xlValues, lookat:=xlWhole)
+
+If Range("UpdateStatus") = "Confirmed" Then
+    roomid.Interior.ColorIndex = 4
+ElseIf Range("UpdateStatus") = "Unconfirmed" Then
+    roomid.Interior.ColorIndex = 6
+ElseIf Range("UpdateStatus") = "Cancelled" Then
+    roomid.Interior.ColorIndex = 3
+ElseIf Range("UpdateStatus") = "Paid" Then
+     roomid.Interior.ColorIndex = 33
+Else
+     roomid.Interior.ColorIndex = 2
+End If
+
+End Sub
