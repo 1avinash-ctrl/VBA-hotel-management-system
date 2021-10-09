@@ -1,0 +1,82 @@
+Option Explicit
+
+Sub AddNewData()
+
+'this will capture user input to data
+'08-10-2021
+'---------------------------------------
+
+'Sheets("Data").Activate
+'Sheets("Data").Range("A2").Value = Sheets("Form").Range("Client").Value
+'Sheets("Data").Range("B2").Value = Sheets("Form").Range("pDate").Value
+'Sheets("Data").Range("C2").Value = Sheets("Form").Range("Amount").Value
+
+
+Sheets("Data").Activate
+Range("A2").Select
+
+Do Until ActiveCell.Value = ""
+    ActiveCell.Offset(1, 0).Select
+
+Loop
+ 
+ActiveCell.Value = Sheets("Hotel").Range("Name").Value
+ActiveCell.Offset(0, 1).Value = Sheets("Hotel").Range("Arrival").Value
+ActiveCell.Offset(0, 2).Value = Sheets("Hotel").Range("Days").Value
+ActiveCell.Offset(0, 3).Value = Sheets("Hotel").Range("End").Value
+ActiveCell.Offset(0, 4).Value = Sheets("Hotel").Range("Status").Value
+ActiveCell.Offset(0, 5).Value = Sheets("Hotel").Range("RoomNo").Value
+ActiveCell.Offset(0, 6).Value = Sheets("Hotel").Range("Days_Cost").Value
+ActiveCell.Offset(0, 7).Value = Sheets("Hotel").Range("Advance").Value
+ActiveCell.Offset(0, 8).Value = Sheets("Hotel").Range("Additional_Cost").Value
+ActiveCell.Offset(0, 9).Value = Sheets("Hotel").Range("Total").Value
+ActiveCell.Offset(0, 10).Value = Sheets("Hotel").Range("Email_Id").Value
+ActiveCell.Offset(0, 11).Value = Sheets("Hotel").Range("Home_Address").Value
+ActiveCell.Offset(0, 12).Value = Sheets("Hotel").Range("Pincode").Value
+ActiveCell.Offset(0, 13).Value = Sheets("Hotel").Range("Phone_Number").Value
+ActiveCell.Offset(0, 14).Value = Sheets("Hotel").Range("Identity_Proof").Value
+ActiveCell.Offset(0, 15).Value = Sheets("Hotel").Range("AH14").Value
+
+
+
+
+Sheets("Hotel").Activate
+Sheets("Hotel").Range("AC12").Value = "Last Data Modified: "
+Sheets("Hotel").Range("AD14").Value = Now()
+
+MsgBox ("Customer Data Successfully Added")
+
+Sheets("Analysis").Activate
+Range("A2").Select
+
+Do Until ActiveCell.Value = ""
+    ActiveCell.Offset(1, 0).Select
+
+Loop
+ 
+ActiveCell.Value = Sheets("Hotel").Range("Name").Value
+ActiveCell.Offset(0, 1).Value = Sheets("Hotel").Range("Arrival").Value
+ActiveCell.Offset(0, 2).Value = Sheets("Hotel").Range("Days").Value
+ActiveCell.Offset(0, 3).Value = Sheets("Hotel").Range("End").Value
+ActiveCell.Offset(0, 4).Value = Sheets("Hotel").Range("Status").Value
+ActiveCell.Offset(0, 5).Value = Sheets("Hotel").Range("RoomNo").Value
+ActiveCell.Offset(0, 6).Value = Sheets("Hotel").Range("Days_Cost").Value
+ActiveCell.Offset(0, 7).Value = Sheets("Hotel").Range("Advance").Value
+ActiveCell.Offset(0, 8).Value = Sheets("Hotel").Range("Additional_Cost").Value
+ActiveCell.Offset(0, 9).Value = Sheets("Hotel").Range("Total").Value
+ActiveCell.Offset(0, 10).Value = Sheets("Hotel").Range("Email_Id").Value
+ActiveCell.Offset(0, 11).Value = Sheets("Hotel").Range("Home_Address").Value
+ActiveCell.Offset(0, 12).Value = Sheets("Hotel").Range("Pincode").Value
+ActiveCell.Offset(0, 13).Value = Sheets("Hotel").Range("Phone_Number").Value
+ActiveCell.Offset(0, 14).Value = Sheets("Hotel").Range("Identity_Proof").Value
+ActiveCell.Offset(0, 15).Value = Sheets("Hotel").Range("AH14").Value
+
+Sheets("Hotel").Activate
+Sheets("Hotel").Range("AC12").Value = "Last Data Modified: "
+Sheets("Hotel").Range("AD14").Value = Now()
+
+
+End Sub
+
+
+
