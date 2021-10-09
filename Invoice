@@ -1,0 +1,25 @@
+Option Explicit
+
+Sub Invoice()
+
+Sheets("Invoice").Range("c13").Value = Sheets("Hotel").Range("J8:k8").Value
+Sheets("Invoice").Range("c14").Value = Sheets("Hotel").Range("y10:AB10").Value
+Sheets("Invoice").Range("c15").Value = Sheets("Hotel").Range("y14:AB14").Value
+Sheets("Invoice").Range("c16").Value = Sheets("Hotel").Range("y8:AB8").Value
+
+
+Sheets("Invoice").Range("h5").Value = Sheets("Hotel").Range("J10:k10").Value
+
+Sheets("Invoice").Range("h7").Value = Sheets("Hotel").Range("Q8:R8").Value
+
+Sheets("Invoice").Range("c21").Value = Sheets("Hotel").Range("J8:k8").Value
+Sheets("Invoice").Range("c21").Value = Sheets("Hotel").Range("J8:k8").Value
+Sheets("Invoice").Range("d21").Value = Sheets("Hotel").Range("Q8:R8").Value
+
+Sheets("Invoice").Range("e21").Value = Sheets("Hotel").Range("j12:k12").Value
+Sheets("Invoice").Range("F21").Value = Sheets("Hotel").Range("J10:k10").Value
+Sheets("Invoice").Range("g21").Value = Sheets("Hotel").Range("J14:k14").Value
+
+Sheets("Invoice").Range("H21").Value = Sheets("Hotel").Range("Q12:R12").Value
+
+End Sub
