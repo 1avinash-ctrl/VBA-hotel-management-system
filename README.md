@@ -4,5 +4,9 @@
 
 2. Please Extract the file before use.
 
-3.Enable the macros before getting started.
+3. Enable the macros before getting started.
+
+4. Some data has already been added in the Data Sheet. You can practise usign those data. 
+
+5. Automatic Inovice generator is also added.  
 
