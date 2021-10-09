@@ -1,0 +1,62 @@
+Option Explicit
+
+
+Sub CreateCalendar()
+Dim csheet As Worksheet
+Set csheet = ThisWorkbook.Sheets("Hotel")
+Dim selDate As String, stCol As Integer, stRow As Integer, lmon As Double, fMon As Double, x As Integer
+Dim FirstT As Integer
+selDate = [E20]
+
+stCol = 8
+stRow = 21
+
+'clear last cal
+Range("G21:T21").ClearContents
+Range("G25:T25").ClearContents
+Range("G29:T29").ClearContents
+Range("G33:T33").ClearContents
+Range("G37:T37").ClearContents
+Range("G41:T41").ClearContents
+'determine what weeday the 1st is......
+
+If Weekday(selDate) = 1 Then
+    stCol = 8
+ElseIf Weekday(selDate) = 2 Then
+    stCol = 10
+ElseIf Weekday(selDate) = 3 Then
+    stCol = 12
+ElseIf Weekday(selDate) = 4 Then
+    stCol = 14
+ElseIf Weekday(selDate) = 5 Then
+    stCol = 16
+ElseIf Weekday(selDate) = 6 Then
+    stCol = 18
+ElseIf Weekday(selDate) = 7 Then
+    stCol = 20
+End If
+
+fMon = DateSerial(Year(selDate), Month(selDate), 1)
+lmon = CDate(Application.WorksheetFunction.EoMonth(fMon, 0))
+
+For x = 1 To Day(lmon)
+
+    If FirstT = Empty Then
+        csheet.Cells(stRow, stCol) = fMon
+        FirstT = 1
+    Else
+        fMon = fMon + 1
+        csheet.Cells(stRow, stCol) = fMon
+       
+    End If
+        If stCol = 20 Then
+            stCol = 8
+            stRow = stRow + 4
+        Else
+            stCol = stCol + 2
+        End If
+Next x
+
+End Sub
+
+
