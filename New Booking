@@ -1,0 +1,27 @@
+Option Explicit
+
+Sub Newbooking()
+
+Dim clearsheet As Worksheet
+Set clearsheet = ThisWorkbook.Sheets("Hotel")
+
+Range("J8:k8").ClearContents
+Range("J10:k10").ClearContents
+Range("J12:k12").ClearContents
+Range("J14:k14").ClearContents
+Range("J16:k16").ClearContents
+
+Range("Q8:R8").ClearContents
+Range("Q10:R10").ClearContents
+Range("Q12:R12").ClearContents
+Range("Q14:R14").ClearContents
+Range("Q16:R16").ClearContents
+
+
+Range("Y8:AB8").ClearContents
+Range("Y10:AB10").ClearContents
+Range("Y12:AB12").ClearContents
+Range("Y14:AB14").ClearContents
+Range("Y16:AB16").ClearContents
+
+End Sub
